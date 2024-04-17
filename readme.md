@@ -1,6 +1,6 @@
 # PDF Chapter Analyzer
 ---
-- This Python script is designed to analyze the contents of a PDF document and categorize each line of text into predefined chapters based on specified keywords using PyPDF2 library to extract text from the PDF file and then assigning each line to the corresponding chapter based on matching keywords.
+- This Python script is designed to analyze the contents of a question paper PDF document and categorize each line of text into predefined chapters based on specified keywords using PyPDF2 library to extract text from the PDF file and then assigning each line to the corresponding chapter based on matching keywords.
 ---
 ## Installation
 Clone or download the repository to your local machine.
