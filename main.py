@@ -1,10 +1,11 @@
 import PyPDF2
 # Define the chapters and their corresponding keywords
 chapters = {
-    "1.1 x": ["y", "yy","yyy"], # Example "1.1 Compression": ["compression", "RLE", "run-length encoding"],
-    "1.2 xx": ["w", "ww", "www"],
-    "1.3 xxx": ["z", "zz", "zzz"], 
+    "Chapter 1: Introduction": ["introduction", "overview", "purpose"],
+    "Chapter 2: Methodology": ["method", "approach", "procedure"],
+    "Chapter 3: Results": ["result", "finding", "outcome"],
 }
+
 
 with open("your pdfname.pdf", "rb") as pdf_file:
     pdf_reader = PyPDF2.PdfReader(pdf_file)
