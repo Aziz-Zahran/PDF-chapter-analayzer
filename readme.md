@@ -1,39 +1,38 @@
-# Questions per chapter counter
+# PDF Chapter Analyzer
 ---
-- This is really useful if you are cramming before an exam. it extracts how many the chapters from questions paper using their keywords and then matches them to their corresponding chapter, you can create a chart using the data by using the `chart.py `file or using excel if you'd like
+- This Python script is designed to analyze the contents of a PDF document and categorize each line of text into predefined chapters based on specified keywords using PyPDF2 library to extract text from the PDF file and then assigning each line to the corresponding chapter based on matching keywords.
 ---
-## Dependencies
-
-```python
-pip install matplotlib
-```
+## Installation
+Clone or download the repository to your local machine.
+Make sure you have Python installed.
+Install the PyPDF2 library using pip:
 
 ```python
 pip install PyPDF2
 ```
----
-## Setup
-For `chapters` Replace the "x" with chapter name and y, w, z, accordingly to the keywords of the chapter, you can add as much as you like
-```python
-chapters = {
 
-    "1.1 x": ["y", "yy","yyy"],
-    "1.2 xx": ["w", "ww", "www"],
-    "1.3 xxx": ["z", "zz", "zzz"],
-}
+\[Optional] If you would like to create a chart using matplot for the results 
+```python
+pip install matplotlib
 ```
 
-Next change: 
-`yourpdfname.pdf` to the filename of the pdf you want to go through(make sure its in the same directory)
-
 ---
-## Disclaimer
-I wouldnt consider this to be 100% accurate, especially when working with a large size pdf
+## Usage
+- Place the PDF file you want to analyze in the same directory as the script.
+- Update the chapters dictionary with the chapter titles as keys and corresponding keywords as values.
+- Update the `your pdfname.pdf` with the name of your PDF
+- Run the script.
 
----
-## For [[chart.py]]
+## Example
+- Suppose you have a PDF file containing a document with chapters and questions. You can define the chapters and their keywords in the chapters dictionary. For example:
 
-Change `x,y,z` according to chapter names
-Change the numbers to the results from [[main.py]]
-
+```py
+chapters = {
+    "Chapter 1: Introduction": ["introduction", "overview", "purpose"],
+    "Chapter 2: Methodology": ["method", "approach", "procedure"],
+    "Chapter 3: Results": ["result", "finding", "outcome"],
+    ...
+}
+```
+The script will analyze each line of text in the PDF and assign it to the corresponding chapter based on the keyword matching.
 
